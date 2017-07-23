@@ -23,6 +23,8 @@ body{
 /*-------------------hreder---------------------------------------------------*/
 
 .header{
+  border: 15px solid #fff;
+  border-bottom: none;
   background-color: #494E55;
   padding: 25px 15px;
   text-align: center;
@@ -42,6 +44,8 @@ body{
 /*------------------main------------------------------------------------------*/
 
 .main{
+  border-left: 15px solid #fff;
+  border-right: 15px solid #fff;
   min-height: calc(100vh - 117px - 78px);
   padding: 70px 15px;
 }
@@ -116,3 +120,5 @@ body{
 
 .footer{
   background-color: #393D43;
+  border: 15px solid #fff;
+  border-top: none;

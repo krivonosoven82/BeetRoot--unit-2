@@ -1,0 +1,247 @@
+.wrap{
+  min-height: 100vh;
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $gray;
+
+  &__substrate{
+    background: url(../img/background.png) no-repeat;
+    width: 100%;
+    max-width: 1008px;
+    height: 861px;
+    display: flex;
+    position: relative;
+
+  }
+
+  &__container{
+    width: 100%;
+    max-width: 600px;
+    height: 545px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  &__nav{
+    background-color: $backgroundNav;
+    height: 100%;
+    max-height: 115px;
+    padding: 0 14px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+
+  }
+
+  &__content{
+    background-color: $backgroundContent;
+    height: 100%;
+    max-height: calc(100% - 115px);
+  }
+
+}
+
+//----------nav
+.nav{
+  &__item{
+    border-bottom: 2px solid transparent;
+    width: 100%;
+    max-width: 150px;
+    height: 115px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    @include transition;
+    &:hover{
+      border-bottom-color: $white;
+      @include transition;
+    }
+
+    &:hover .nav__title{
+      color: $white;
+      @include transition;
+    }
+  }
+
+  &__icon{
+    width: 28px;
+    height: 28px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  &__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__title{
+    @include fonts(16px, $titleNav);
+    text-transform: uppercase;
+  }
+}
+.overlay{
+  background-color: $blueSubstrate;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+//----------content
+
+.content{
+  &__item{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: $white;
+  }
+
+  &__box{
+    width: 100%;
+    max-width: 515px;
+    min-height: 310px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__container{
+    width: 100%;
+    max-width: 160px;
+    min-height: 100%;
+
+    &--large{
+      max-width: calc(100% - 190px);
+      position: relative;
+      padding-top: 10px;
+    }
+  }
+
+  &__photo{
+    height: 230px;
+    margin-bottom: 23px;
+    overflow: hidden;
+  }
+
+  &__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__stars{
+    width: 110px;
+    height: 24px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__rating{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__title{
+    @include fonts(32px, $white);
+    margin-bottom: 5px;
+  }
+
+  &__subtitle{
+    @include fonts(14px, $white);
+    text-transform: capitalize;
+    margin-bottom: 40px;
+  }
+
+  &__description{
+    @include fonts(14px, $textDescription);
+    line-height: 1.57em;
+    margin-bottom: 55px;
+
+  }
+
+  &__block{
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.block{
+    &__left{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &__sale{
+      @include fonts(12px, $sale);
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    &__price{
+      @include fonts(32px, $white);
+    }
+
+    &__right{
+    }
+
+    &__btn{
+      width: 165px;
+      height: 55px;
+      background-color: $btn;
+      border: 3px solid transparent;
+      border-radius: 3px;
+      @include fonts(16px, $white);
+      font-weight: 700;
+      text-transform: uppercase;
+      cursor: pointer;
+      @include transition;
+      &:hover{
+        @include transition;
+        background-color: $btnHover;
+      }
+
+  }
+}
+
+//----------active & white
+.active{
+  border-bottom: 2px solid $white;
+}
+.white{
+  color: $white;
+}
+
+.fa-star{
+  color: $starDark;
+
+  &--gold{
+    color: $starGold;
+  }
+}

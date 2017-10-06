@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="./css/jquery.circliful.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Tabs</title>
+</head>
+<body>
+  <div class="wrap">
+    <div class="wrap__substrate">
+      <div class="wrap__container ">
+        <div class="wrap__nav nav">
+          <div class="nav__item">
+            <div class="nav__icon">
+              <img class="nav__img" src="./img/tooltip.png" alt="icon">
+            </div>
+            <span class="nav__title">information</span>
+          </div>
+          <div class="nav__item">
+            <div class="nav__icon">
+              <img class="nav__img" src="./img/card.png" alt="icon">
+            </div>
+            <span class="nav__title">ratings info</span>
+          </div>
+          <div class="nav__item">
+            <div class="nav__icon">
+              <img class="nav__img" src="./img/basket.png" alt="icon">
+            </div>
+            <span class="nav__title">where to buy</span>
+          </div>
+        </div>
+        <div class="wrap__content content">
+          <div id="tab1" class="content__item">
+            <div class="content__box">
+              <div class="content__container">
+                <div class="content__photo">
+                  <img class="content__img" src="./img/cover.png" alt="photo">
+                </div>
+                <div class="content__stars">
+                  <span class="fa fa-star fa-star--gold" aria-hidden="true"></span>
+                  <span class="fa fa-star fa-star--gold" aria-hidden="true"></span>
+                  <span class="fa fa-star fa-star--gold" aria-hidden="true"></span>
+                  <span class="fa fa-star fa-star--gold" aria-hidden="true"></span>
+                  <span class="fa fa-star" aria-hidden="true"></span>
+                </div>
+              </div>
+              <div class="content__container content__container--large">
+
+                <div class="content__rating">
+                  <div id="rating"></div>
+                </div>
+
+                <p class="content__title">FarCry 4</p>
+                <p class="content__subtitle">first released nav 17,2014</p>
+                <p class="content__description">In Far Cry 4, players find themselves in Kyrat, a breathtaking, perilous and wild region of the Hima
+layas struggling under the regime of a despotic self-appointed king.</p>
+                <div class="content__block block">
+                  <div class="block__left">
+                    <span class="block__sale">20% off!</span>
+                    <span class="block__price">$59.96</span>
+                  </div>
+                  <div class="block__right">
+                    <button class="block__btn">buy it now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="tab2" class="content__item">page2</div>
+          <div id="tab3" class="content__item">page3</div>
+        </div>
+      </div>
+    <div class="overlay"></div>
+    </div>
+  </div>
+
+  <script src="./js/jquery-3.2.1.js"></script>
+  <script src="./js/jquery.circliful.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+@mixin fonts($font-size, $color){
+  font-size: $font-size;
+  color: $color;
+}
+
+@mixin transition($time: 0.3s){
+  transition: all $time ease-in-out;
+}

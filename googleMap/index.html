@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BeetRoot</title>
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+  <body>
+    <div class="container">
+      <div id="content" class="content">
+        <select  id="address" class="content__select">
+          <option value="Киев, ул. Прорезная 18/1Г">Киев</option>
+          <option value="Одесса, ул. Асташкина, 29">Одесса</option>
+          <option value="Полтава, просп. Мира 36">Полтава</option>
+        </select>
+        <button id="submit" class="content__btn">Локация</button>
+      </div>
+      <div id="path" class="path">
+        <button id="goToPath" class="goToPath">Проложить маршрут</button>
+        <div id="path__content" class="path__content">
+          <span>Start:</span>
+          <select id="start" class="path__select">
+            <option value="Киев, ул. Прорезная 18/1Г">Киев</option>
+            <option value="Одесса, ул. Асташкина, 29">Одесса</option>
+            <option value="Полтава, просп. Мира 36">Полтава</option>
+           </select>
+           <span>End:</span>
+           <select id="end" class="path__select">
+            <option value="Киев, ул. Прорезная 18/1Г">Киев</option>
+            <option value="Одесса, ул. Асташкина, 29">Одесса</option>
+            <option value="Полтава, просп. Мира 36">Полтава</option>
+          </select>
+        </div>
+      </div>
+     </div>
+      <div id="map" class="content__map"></div>
+    </div>
+    <script src="./js/jquery-3.2.1.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBclPz8xtvfyGF9IOEwUrxJqyHuqrZPVFU&callback=initMap">
+    </script>
+    <script src="./js/main.js"></script>
+    <script src="./js/mainjq.js"></script>
+  </body>
+</html>

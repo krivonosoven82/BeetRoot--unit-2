@@ -44,6 +44,10 @@ body{
 .content__btn:hover{
   background-color: #94ceb9;
 }
+.content__btn:active,.content__btn:focus{
+  border: none;
+  outline: none;
+}
 
 /*----------path-----------*/
 .path{
@@ -85,6 +89,11 @@ span{
 }
 .goToPath:hover{
     background-color: #94ceb9;
+}
+
+.goToPath:active, .goToPath:focus{
+  border: none;
+  outline: none;
 }
 
 

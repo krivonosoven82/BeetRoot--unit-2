@@ -1,0 +1,147 @@
+.team{
+  width: 100%;
+  padding: 80px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__wrap{
+    position: relative;
+    width: 100%;
+    max-width: 1030px;
+    height: 100%;
+    max-height: 366px;
+    margin-bottom: 50px;
+  }
+
+  &__content{
+    height: 366px;
+    position: relative;
+  }
+
+  &__item{
+    position: absolute;
+    width: 100%;
+    max-width: 286px;
+    height: 366px;
+    overflow: hidden;
+    &--text{
+      max-width: 430px;
+      right: 0;
+      padding-top: 25px;
+      padding-right: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      overflow: auto;
+    }
+  }
+
+  &__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    cursor: pointer;
+    opacity: 0;
+    @include transition;
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  &__title{
+    margin-bottom: 10px;
+    font-size: 20px;
+    letter-spacing: 0.04em;
+    color: $blackFilter;
+  }
+
+  &__subtitle{
+    margin-bottom: 30px;
+    font-family: 'Source Sans Pro';
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $grayText;
+  }
+
+  &__description{
+    line-height: 1.75em;
+    letter-spacing: 0.05em;
+    text-align: right;
+    color: $grayText;
+
+  }
+}
+
+//-----------------------------------------------
+.slick-dots{
+  padding-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  li{
+   list-style-type: none;
+   margin-right: 10px;
+   border-radius: 50%;
+   button {
+     cursor: pointer;
+     display: block;
+     width: 10px;
+     height: 10px;
+     border: 1px solid $green;
+     border-radius: 50%;
+     background-color: transparent;
+     font-size: 0;
+   }
+   &:last-of-type {
+     margin-right: 0;
+   }
+   &.slick-active {
+     background-color: $green;
+   }
+  }
+}
+
+.overlay{
+  &__content{
+    width: 100%;
+    height: 100%;
+    background-color: $overlayWhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__links{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 16px;
+    color: $overlayWhite;
+    background-color: $darkBlue;
+    @include transition;
+    &--margin{
+      margin: 0 11px;
+    }
+    &:first-of-type:hover{
+      background-color: $instagram;
+    }
+    &:nth-of-type(2):hover{
+      background-color: $facebook;
+    }
+    &:last-of-type:hover{
+      background-color: $twitter;
+    }
+  }
+}

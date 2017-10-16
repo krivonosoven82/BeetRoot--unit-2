@@ -1,0 +1,90 @@
+.portfolio{
+  width: 100%;
+  min-height: 100vh;
+  padding: 86px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $background;
+
+  &__title{
+    font-family: 'Source Sans Pro';
+    font-weight: 200;
+    font-size: 20px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    color: $blackText;
+  }
+  &__description{
+    max-width: 470px;
+    text-align: center;
+    line-height: 1.78em;
+    letter-spacing: 0.05em;
+    color: $grayText;
+    margin-bottom: 70px;
+    &--team{
+      margin-bottom: 60px;
+    }
+  }
+}
+.filtr-item {
+    height: 300px;
+    width: 300px;
+    padding: 10px;
+}
+
+.filtr-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item-desc {
+    display: none;
+    padding: 0 1rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    text-align: center;
+}
+
+/* Filter controls */
+.custom-simplefilter{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+.custom-simplefilter li {
+     position: relative;
+     display: inline-block;
+     padding: 10px 0;
+     margin-right: 30px;
+     border: none;
+     background-color: transparent;
+     font-size: 16px;
+     color: $blackFilter;
+     cursor: pointer;
+     &--none{
+       margin-right: 0;
+     }
+}
+
+
+.custom-simplefilter li.active {
+    &::after{
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translate(-50%, 150%);
+          width: 38px;
+          height: 2px;
+          background-color: $green;
+
+        }
+}

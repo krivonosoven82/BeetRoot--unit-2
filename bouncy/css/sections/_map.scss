@@ -1,0 +1,10 @@
+.map{
+  height: 444px;
+  &__content{
+    background-color: $grayText;
+    max-width: 100%;
+
+    height: 100%;
+
+  }
+}

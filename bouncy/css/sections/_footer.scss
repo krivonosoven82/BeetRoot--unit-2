@@ -1,0 +1,73 @@
+.footer{
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__logo{
+    width: 140px;
+    height: 24px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  &__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__copy{
+    margin-bottom: 34px;
+    letter-spacing: 0.05em;
+    color: $grayText;
+  }
+  &__social{
+    width: 180px;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+  }
+  &__links{
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 16px;
+    color: $white;
+    @include transition;
+    &:first-of-type{
+      background-color: $facebook;
+      &:first-of-type:hover{
+        background-color: darken($facebook, 15%);
+      }
+    }
+    &:nth-of-type(2){
+      background-color: $twitter;
+      &:nth-of-type(2):hover{
+        background-color: darken($twitter, 15%);
+      }
+    }
+    &:nth-of-type(3){
+      background-color: $linkedin;
+      &:nth-of-type(3):hover{
+        background-color: darken($linkedin, 15%);
+      }
+    }
+    &:nth-of-type(4){
+      background-color: $instagram;
+      &:nth-of-type(4):hover{
+        background-color: darken($instagram, 15%);
+      }
+    }
+    &:last-of-type{
+      background-color: $vimeo;
+      &:last-of-type:hover{
+        background-color: darken($vimeo, 15%);
+      }
+    }
+
+
+  }
+}

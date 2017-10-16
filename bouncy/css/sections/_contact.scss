@@ -1,0 +1,25 @@
+.contact{
+  min-height: 242px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__title{
+    margin-bottom: 38px;
+    font-family: 'Source Sans Pro';
+    font-size: 20px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $blackText;
+
+  }
+  &__description{
+    width: 100%;
+    max-width: 446px;
+    text-align: center;
+    line-height: 1.78em;
+    letter-spacing: 0.05em;
+    color: $grayText;
+  }
+}

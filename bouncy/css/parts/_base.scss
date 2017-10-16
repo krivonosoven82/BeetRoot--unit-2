@@ -1,0 +1,37 @@
+body{
+  font-family: 'Open Sans', 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.button-up {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: $grayText;
+  border: 1px solid $grayText;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 16px;
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  @include transition;
+  z-index: 10;
+  &.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  &:hover {
+    background-color: $green;
+    border-color: $green;
+    color: $white;
+  }
+}

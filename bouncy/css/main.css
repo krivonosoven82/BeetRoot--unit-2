@@ -13,12 +13,31 @@
 body {
   font-family: 'Open Sans', 'Source Sans Pro', sans-serif;
   font-size: 14px;
-  font-weight: 400; }
+  font-weight: 400;
+  width: 100%;
+  min-width: 320px; }
 
 .img {
   width: 100%;
   height: 100%;
   object-fit: cover; }
+
+.btn-menu {
+  display: none;
+  position: absolute;
+  right: 30px;
+  width: 34px;
+  height: 34px;
+  background-color: #fff;
+  border: 2px solid transparent;
+  border-radius: 2px; }
+  @media (max-width: 600px) {
+    .btn-menu {
+      display: block; } }
+
+.fa-bars {
+  font-size: 20px;
+  color: #81868e; }
 
 .button-up {
   width: 38px;
@@ -89,6 +108,9 @@ body {
     opacity: 0;
     transition: all 0.3s ease-in-out;
     z-index: 10; }
+    @media (max-width: 600px) {
+      .header__navbar-scroll {
+        display: none; } }
     .header__navbar-scroll.is-visible {
       opacity: 1;
       pointer-events: auto; }
@@ -98,9 +120,37 @@ body {
     margin-right: 15px;
     overflow: hidden; }
   .header__nav {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    @media (max-width: 600px) {
+      .header__nav {
+        display: none; } }
+  .header__nav-mobail {
+    display: none;
+    position: absolute;
+    top: 77px;
+    width: 100%;
+    max-width: 600px;
+    background-color: #19bd9a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none; }
+    .header__nav-mobail--active {
+      display: flex; }
+  .header__item-mobail {
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    color: #fff;
+    border-bottom: 1px solid #107963; }
+    .header__item-mobail--active {
+      background-color: #139075; }
   .header__nav-item {
     width: 80px;
     height: 34px;
@@ -179,6 +229,21 @@ body {
     .portfolio__description--team {
       margin-bottom: 60px; }
 
+.filtr-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; }
+  @media (max-width: 1235px) {
+    .filtr-container {
+      max-width: 1000px; } }
+  @media (max-width: 1235px) and (max-width: 940px) {
+    .filtr-container {
+      max-width: 700px; } }
+
+  @media (max-width: 1235px) and (max-width: 940px) and (max-width: 640px) {
+    .filtr-container {
+      max-width: 400px; } }
+
 .filtr-item {
   height: 300px;
   width: 300px;
@@ -219,6 +284,13 @@ body {
   cursor: pointer; }
   .custom-simplefilter li--none {
     margin-right: 0; }
+  @media (max-width: 645px) {
+    .custom-simplefilter li {
+      margin-right: 15px; } }
+  @media (max-width: 645px) and (max-width: 450px) {
+    .custom-simplefilter li {
+      margin-right: 10px;
+      font-size: 14px; } }
 
 .custom-simplefilter li.active::after {
   content: '';
@@ -245,6 +317,8 @@ body {
     margin-bottom: 50px; }
   .team__content {
     height: 366px;
+    display: flex;
+    justify-content: space-between;
     position: relative; }
   .team__item {
     position: absolute;
@@ -252,6 +326,16 @@ body {
     max-width: 286px;
     height: 366px;
     overflow: hidden; }
+    @media (max-width: 755px) {
+      .team__item {
+        max-width: 200px; } }
+  @media (max-width: 755px) and (max-width: 600px) {
+    .team__item {
+      height: 200px;
+      max-width: 150px;
+      left: 50%;
+      transform: translateX(-50%); } }
+
     .team__item--text {
       max-width: 430px;
       right: 0;
@@ -261,6 +345,19 @@ body {
       flex-direction: column;
       align-items: flex-end;
       overflow: auto; }
+      @media (max-width: 755px) {
+        .team__item--text {
+          max-width: 340px; } }
+  @media (max-width: 755px) and (max-width: 600px) {
+    .team__item--text {
+      max-width: 320px;
+      top: 210px; } }
+
+  @media (max-width: 755px) and (max-width: 600px) and (max-width: 600px) {
+    .team__item--text {
+      max-width: 420px;
+      align-items: center; } }
+
   .team__img {
     width: 100%;
     height: 100%;
@@ -414,6 +511,9 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center; }
+      @media (max-width: 515px) {
+        .testimonials__container .testimonials__content {
+          flex-direction: column; } }
       .testimonials__container .testimonials__content .testimonials__item {
         width: 100%; }
         .testimonials__container .testimonials__content .testimonials__item--left {

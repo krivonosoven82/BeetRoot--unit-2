@@ -16,8 +16,10 @@
 
   &__content{
     height: 366px;
-    position: relative;
-  }
+    display: flex;
+    justify-content: space-between;
+     position: relative;
+}
 
   &__item{
     position: absolute;
@@ -25,6 +27,15 @@
     max-width: 286px;
     height: 366px;
     overflow: hidden;
+    @media(max-width: 755px){
+      max-width: 200px;
+      @media(max-width: 600px){
+        height: 200px;
+        max-width: 150px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
     &--text{
       max-width: 430px;
       right: 0;
@@ -34,6 +45,17 @@
       flex-direction: column;
       align-items: flex-end;
       overflow: auto;
+      @media(max-width: 755px){
+        max-width: 340px;
+        @media(max-width: 600px){
+          max-width: 320px;
+          top: 210px;
+          @media(max-width: 600px){
+            max-width: 420px;
+            align-items: center;
+          }
+        }
+      }
     }
   }
 

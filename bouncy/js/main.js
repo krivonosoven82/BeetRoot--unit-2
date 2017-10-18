@@ -75,7 +75,7 @@ if ($('#button-up').length) {
 }
 
 //------------------------------------------------------------------------------
-// Set active element in color
+// Set active class header__nav-item--active
 $('.header__nav-item').click(function(e) {
   e.preventDefault();
   $('.header__nav a').removeClass('header__nav-item--active');
@@ -83,6 +83,17 @@ $('.header__nav-item').click(function(e) {
 });
 
 //------------------------------------------------------------------------------
+// Set active class header__nav-mobail--active
+$('.header__item-mobail').click(function(e) {
+  e.preventDefault();
+  $('.header__nav-mobail a').removeClass('header__item-mobail--active');
+  $(this).addClass('header__item-mobail--active');
+});
+
+$('#btn-menu').click(function(){
+  $('#nav-mobail').toggleClass('header__nav-mobail--active');
+});
+
 //Fixed sticky aside menu
 if ($('#nav-scroll').length) {
   let scrollTrigger = 100, // px

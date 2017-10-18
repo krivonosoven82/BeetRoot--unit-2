@@ -53,6 +53,9 @@
     opacity: 0;
     @include transition;
     z-index: 10;
+    @media(max-width: 600px){
+      display: none;
+    }
     &.is-visible {
       opacity: 1;
       pointer-events: auto;
@@ -67,9 +70,42 @@
   }
 
   &__nav{
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media(max-width: 600px){
+      display: none;
+    }
+  }
+
+  &__nav-mobail{
+    display: none;
+    position: absolute;
+    top: 77px;
+    width: 100%;
+    max-width: 600px;
+    background-color: $green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    &--active{
+      display: flex;
+    }
+  }
+  &__item-mobail{
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    color: $white;
+    border-bottom: 1px solid darken($green, 15%);
+    &--active{
+      background-color: darken($green, 10%);
+    }
   }
 
   &__nav-item{

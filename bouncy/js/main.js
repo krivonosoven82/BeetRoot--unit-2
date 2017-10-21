@@ -51,6 +51,18 @@ $(document).ready(function(){
     $('body,html').animate({ scrollTop: top }, 800);
   });
 //------------------------------------------------------------------------------
+
+//Slow scroll from menu-mobail to current section
+$(".header__item-mobail").on("click", function (event) {
+  event.preventDefault();
+  let id = $(this).attr('href'),
+    top = $(id).offset().top;
+
+  $('body,html').animate({ scrollTop: top }, 800);
+});
+
+
+
 //back to top
 if ($('#button-up').length) {
   let scrollTrigger = 300, // px
@@ -85,6 +97,7 @@ $('.header__nav-item').click(function(e) {
 //------------------------------------------------------------------------------
 // Set active class header__nav-mobail--active
 $('.header__item-mobail').click(function(e) {
+  console.log(1111, e);
   e.preventDefault();
   $('.header__nav-mobail a').removeClass('header__item-mobail--active');
   $(this).addClass('header__item-mobail--active');

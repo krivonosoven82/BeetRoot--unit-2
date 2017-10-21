@@ -93,6 +93,7 @@
     display: none;
     &--active{
       display: flex;
+
     }
   }
   &__item-mobail{
@@ -105,6 +106,9 @@
     border-bottom: 1px solid darken($green, 15%);
     &--active{
       background-color: darken($green, 10%);
+      @media(max-width: 600px){
+        display: none;
+      }
     }
   }
 
